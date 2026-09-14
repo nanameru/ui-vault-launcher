@@ -1,0 +1,35 @@
+// UI Vault ランチャー。本体コードは含まず、ビルド時に合言葉で取得して app/ に展開する。
+// database_id は Deploy 時に Cloudflare が書き込む。手動デプロイなら `wrangler d1 create ui-vault-mcp-db` の値を入れる。
+{
+  "name": "ui-vault",
+  "main": "app/src/worker/index.ts",
+  "compatibility_date": "2026-09-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./app/dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/mcp"]
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "UI_VAULT_RELEASE": "ui-vault-1.0.0",
+    "UI_VAULT_UNLOCK_URL": "https://taiyo-ai-hub-downloads.4869nanataitai.workers.dev"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ui-vault-mcp-db",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "app/migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "ASSETS_BUCKET",
+      "bucket_name": "ui-vault-mcp-assets"
+    }
+  ]
+}

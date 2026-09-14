@@ -1,0 +1,25 @@
+{
+  "name": "ui-vault-launcher",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "build": "bash cf-build.sh",
+    "deploy": "bash cf-deploy.sh"
+  },
+  "devDependencies": {
+    "wrangler": "4.130.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "RELEASE_KEY": {
+        "description": "note 記事 / Taiyo AI Hub で受け取った、この版の合言葉"
+      },
+      "API_TOKEN": {
+        "description": "UI Vault の API/MCP 用トークン。openssl rand -base64 32 などで生成した長いランダム文字列。あとで Web UI と MCP クライアントに貼るので控えておく"
+      },
+      "UI_VAULT_RELEASE": {
+        "description": "取得する版の ID。通常は変更不要。新しい版を買ったら書き換えて push"
+      }
+    }
+  }
+}
