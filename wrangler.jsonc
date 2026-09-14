@@ -15,7 +15,7 @@
     "enabled": true
   },
   "vars": {
-    "UI_VAULT_RELEASE": "ui-vault-1.0.0",
+    "UI_VAULT_RELEASE": "ui-vault-1-0-0",
     "UI_VAULT_UNLOCK_URL": "https://taiyo-ai-hub-downloads.4869nanataitai.workers.dev"
   },
   "d1_databases": [
