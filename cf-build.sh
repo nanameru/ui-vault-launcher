@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# UI Vault 本体を合言葉で取得してビルドする。
+# UIギャング本体を合言葉で取得してビルドする。
 # Deploy ボタンの build ステップとして Cloudflare が実行する想定。合言葉の値はログに出さない。
 set -euo pipefail
 cd "$(dirname "$0")"

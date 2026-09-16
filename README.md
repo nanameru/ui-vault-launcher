@@ -1,6 +1,6 @@
 # ui-vault-launcher
 
-UI Vault を自分の Cloudflare アカウントにボタン 1 回で建てるためのランチャーです。**本体コードは含まれません**。ビルド時に合言葉で Taiyo AI Hub の配布サーバから取得します。
+UIギャング（UI Gang、旧 UI Vault）を自分の Cloudflare アカウントにボタン 1 回で建てるためのランチャーです。**本体コードは含まれません**。ビルド時に合言葉で Taiyo AI Hub の配布サーバから取得します。
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/nanameru/ui-vault-launcher)
 
@@ -28,4 +28,4 @@ UI Vault を自分の Cloudflare アカウントにボタン 1 回で建てる�
 
 ## ライセンス
 
-このランチャーは MIT。本体（UI Vault）は購入時の `LICENSE.txt` に従います。
+このランチャーは MIT。本体（UIギャング）は購入時の `LICENSE.txt` に従います。

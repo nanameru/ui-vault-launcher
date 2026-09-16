@@ -1,4 +1,4 @@
-// UI Vault ランチャー。本体コードは含まず、ビルド時に合言葉で取得して app/ に展開する。
+// UIギャング ランチャー。本体コードは含まず、ビルド時に合言葉で取得して app/ に展開する。
 // database_id は Deploy 時に Cloudflare が書き込む。手動デプロイなら `wrangler d1 create ui-vault-mcp-db` の値を入れる。
 {
   "name": "ui-vault",
