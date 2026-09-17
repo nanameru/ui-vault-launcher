@@ -10,9 +10,10 @@ UIギャング（UI Gang、旧 UI Vault）を自分の Cloudflare アカウン�
 2. 上のボタンを押す
 3. セットアップ画面で `RELEASE_KEY`（合言葉）と `API_TOKEN`（自分で `openssl rand -base64 32` などで生成）を入力
 4. デプロイ完了後の URL を開き、設定（歯車）→ API トークンに `API_TOKEN` を貼る
-5. MCP 登録:
+5. MCP 登録（トークンを貼る方式）:
    - Claude Code: `claude mcp add --transport http ui-vault https://<worker>.workers.dev/mcp --header "Authorization: Bearer <API_TOKEN>"`
    - Codex: `export UI_VAULT_TOKEN=<API_TOKEN>` → `codex mcp add ui-vault --url https://<worker>.workers.dev/mcp --bearer-token-env-var UI_VAULT_TOKEN`
+   - WorkOS（Google ログイン）を設定した場合はヘッダ無しで登録でき、初回接続でブラウザのサインインが開きます（本体 README の「WorkOS 設定」参照）
 
 ## ビルドが「RELEASE_KEY がビルド環境にありません」で失敗する場合
 
